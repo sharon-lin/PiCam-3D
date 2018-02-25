@@ -20,6 +20,7 @@
     </style>
   </head>
   <body>
+    <div id="status"></div>
     <div id="webglviewer"></div>
 
     <script src="./js/three.min.js"></script>
@@ -198,6 +199,7 @@
         orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
 
     window.addEventListener(orientationEvent, function() {
+        document.getElementById("status").innerHTML = " "+ window.orientation;
         alert('HOLY ROTATING SCREENS BATMAN:' + window.orientation + " " + screen.width);
     }, false);
     </script>
