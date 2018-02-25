@@ -195,8 +195,11 @@
           container.webkitRequestFullscreen();
         }
       }
+      
       var supportsOrientationChange = "onorientationchange" in window,
         orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
+      
+      document.getElementById("status").innerHTML = " "+ window.orientation;
 
     window.addEventListener(orientationEvent, function() {
         document.getElementById("status").innerHTML = " "+ window.orientation;
